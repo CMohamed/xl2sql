@@ -24,16 +24,17 @@ const xl2sql = (filename, tableName) => {
         let line = '';
         for (let i = 1; i < rows.length; i++) {
             console.log(rows[i]);
+            console.log("row : --------- "+ i);
             line = insertQuery(tableName, columns, rows[i]);
             sqlData += (line + "\n");
         }
-        fs.writeFile(`${filename}.sql`, sqlData, (err) => {
+        fs.writeFile(`sqlQueries/${filename}.sql`, sqlData, (err) => {
             if (err) throw err;
         })
     });
 }
 
-xl2sql('Food2eme', 'foodsec');
-xl2sql('appended', 'appended');
-xl2sql('food_dataN3', 'food_data');
-xl2sql('fooddiction', 'food_diction');
+//xl2sql('Food2eme', 'foodsec');
+//xl2sql('appended', 'appended');
+//xl2sql('food_dataN3', 'food_data');
+//xl2sql('fooddiction', 'food_diction');
