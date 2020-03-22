@@ -37,4 +37,5 @@ const xl2sql = (filename, tableName) => {
 //xl2sql('Food2eme', 'foodsec');
 //xl2sql('appended', 'appended');
 //xl2sql('food_dataN3', 'food_data');
+xl2sql('food3_10000_2', 'food_data');
 //xl2sql('fooddiction', 'food_diction');
